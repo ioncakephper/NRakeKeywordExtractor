@@ -119,7 +119,7 @@ namespace WindowsFormsApplication1
 
         private void toolStripSplitButton1_ButtonDoubleClick(object sender, EventArgs e)
         {
-            
+            throw new NotImplementedException();
         }
 
         private void removeToolStripMenuItem_Click(object sender, EventArgs e)

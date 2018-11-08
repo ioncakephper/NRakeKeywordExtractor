@@ -1,20 +1,39 @@
-﻿//------------------------------------------------------------------------------------
-// <copyright file="TopicKeywordExtractor.cs" company="Ion Gireada">
-//    Copyright (c) 2018 Ion Gireada
-// </copyright>
-//------------------------------------------------------------------------------------
-
-namespace NRakeKeywordExtractor
+﻿namespace NRakeKeywordExtractor
 {
     using NRakeCore;
     using System.Collections.Generic;
     using System.Linq;
-
     /// <summary>
     /// Defines the <see cref="TopicKeywordExtractor" />
     /// </summary>
     public class TopicKeywordExtractor
     {
+        #region Properties of TopicKeywordExtractor (4)
+
+        /// <summary>
+        /// Gets or sets the Items
+        /// </summary>
+        public List<Topic> Items { get; set; }
+
+        /// <summary>
+        /// Gets the KeyPhraseTopics
+        /// </summary>
+        public SortedList<string, List<Topic>> KeyPhraseTopics { get; private set; }
+
+        /// <summary>
+        /// Gets the KeywordExtractor
+        /// </summary>
+        public KeywordExtractor KeywordExtractor { get; private set; }
+
+        /// <summary>
+        /// Gets the TopicKeyPhrases
+        /// </summary>
+        public Dictionary<Topic, List<string>> TopicKeyPhrases { get; private set; }
+
+        #endregion Properties of TopicKeywordExtractor (4)
+
+        #region Constructors of TopicKeywordExtractor (8)
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TopicKeywordExtractor"/> class.
         /// </summary>
@@ -90,25 +109,9 @@ namespace NRakeKeywordExtractor
             KeywordExtractor = new NRakeCore.KeywordExtractor(filter);
         }
 
-        /// <summary>
-        /// Gets or sets the Items
-        /// </summary>
-        public List<Topic> Items { get; set; }
+        #endregion Constructors of TopicKeywordExtractor (8)
 
-        /// <summary>
-        /// Gets the KeywordExtractor
-        /// </summary>
-        public KeywordExtractor KeywordExtractor { get; private set; }
-
-        /// <summary>
-        /// Gets the TopicKeyPhrases
-        /// </summary>
-        public Dictionary<Topic, List<string>> TopicKeyPhrases { get; private set; }
-
-        /// <summary>
-        /// Gets the KeyPhraseTopics
-        /// </summary>
-        public SortedList<string, List<Topic>> KeyPhraseTopics { get; private set; }
+        #region Methods of TopicKeywordExtractor (4)
 
         /// <summary>
         /// The FindKeyPhrases
@@ -167,5 +170,7 @@ namespace NRakeKeywordExtractor
             }
             return keyPhraseTopics;
         }
+
+        #endregion Methods of TopicKeywordExtractor (4)
     }
 }

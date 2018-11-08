@@ -1,33 +1,22 @@
-﻿//------------------------------------------------------------------------------------
-// <copyright file="BasicTopic.cs" company="Ion Gireada">
-//    Copyright (c) 2018 Ion Gireada
-// </copyright>
-//------------------------------------------------------------------------------------
-
-namespace NRakeKeywordExtractor
+﻿namespace NRakeKeywordExtractor
 {
     using System;
-
     /// <summary>
     /// Defines the <see cref="BasicTopic" />
     /// </summary>
     public class BasicTopic
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BasicTopic"/> class.
-        /// </summary>
-        public BasicTopic()
-        {
-            FilePath = string.Empty;
-            FileName = string.Empty;
-            Folder = string.Empty;
-            Title = string.Empty;
-        }
+        #region Properties of BasicTopic (4)
 
         /// <summary>
         /// Gets or sets the FileName
         /// </summary>
         public string FileName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the FilePath
+        /// </summary>
+        public string FilePath { get; set; }
 
         /// <summary>
         /// Gets or sets the Folder
@@ -39,10 +28,24 @@ namespace NRakeKeywordExtractor
         /// </summary>
         public string Title { get; set; }
 
+        #endregion Properties of BasicTopic (4)
+
+        #region Constructors of BasicTopic (1)
+
         /// <summary>
-        /// Gets or sets the FilePath
+        /// Initializes a new instance of the <see cref="BasicTopic"/> class.
         /// </summary>
-        public string FilePath { get; set; }
+        public BasicTopic()
+        {
+            FilePath = string.Empty;
+            FileName = string.Empty;
+            Folder = string.Empty;
+            Title = string.Empty;
+        }
+
+        #endregion Constructors of BasicTopic (1)
+
+        #region Methods of BasicTopic (3)
 
         /// <summary>
         /// Get topic text
@@ -71,5 +74,7 @@ namespace NRakeKeywordExtractor
         {
             return String.Empty;
         }
+
+        #endregion Methods of BasicTopic (3)
     }
 }

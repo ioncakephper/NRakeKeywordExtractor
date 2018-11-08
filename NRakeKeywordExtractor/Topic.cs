@@ -1,8 +1,8 @@
-﻿//------------------------------------------------------------------------------------
-// <copyright file="Topic.cs" company="Ion Gireada">
-//    Copyright (c) 2018 Ion Gireada
+﻿//------------------------------------------------------------------------------
+// <copyright file="Topic.cs" company="Weblidity Software">
+//      Copyright (c) Weblidity Software. All rights reserved.
 // </copyright>
-//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 namespace NRakeKeywordExtractor
 {
@@ -23,18 +23,7 @@ namespace NRakeKeywordExtractor
             Title = GetTitle();
         }
 
-        /// <summary>
-        /// The GetTitle
-        /// </summary>
-        /// <param name="path">The path<see cref="string"/></param>
-        /// <returns>The <see cref="string"/></returns>
-        public override string GetTitle(string path)
-        {
-            var doc = new HtmlAgilityPack.HtmlDocument();
-            doc.Load(FilePath);
-            var node = doc.DocumentNode.SelectSingleNode("//head/title");
-            return node.InnerText;
-        }
+        public int WordCount { get; set; }
 
         /// <summary>
         /// The GetText
@@ -45,6 +34,19 @@ namespace NRakeKeywordExtractor
             var doc = new HtmlAgilityPack.HtmlDocument();
             doc.Load(FilePath);
             var node = doc.DocumentNode.SelectSingleNode("//body");
+            return node.InnerText;
+        }
+
+        /// <summary>
+        /// The GetTitle
+        /// </summary>
+        /// <param name="path">The path<see cref="string"/></param>
+        /// <returns>The <see cref="string"/></returns>
+        public override string GetTitle(string path)
+        {
+            var doc = new HtmlAgilityPack.HtmlDocument();
+            doc.Load(FilePath);
+            var node = doc.DocumentNode.SelectSingleNode("//head/title");
             return node.InnerText;
         }
     }
