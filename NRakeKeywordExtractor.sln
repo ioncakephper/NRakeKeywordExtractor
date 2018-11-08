@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRakeCore", "..\ioncakephpe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{ECCEB816-15F2-41C6-85A3-BB0369DE7748}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsControlLibrary1", "WindowsFormsControlLibrary1\WindowsFormsControlLibrary1.csproj", "{56D8316C-2A78-48D0-B733-3DB51176B4F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{ECCEB816-15F2-41C6-85A3-BB0369DE7748}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECCEB816-15F2-41C6-85A3-BB0369DE7748}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECCEB816-15F2-41C6-85A3-BB0369DE7748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56D8316C-2A78-48D0-B733-3DB51176B4F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56D8316C-2A78-48D0-B733-3DB51176B4F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56D8316C-2A78-48D0-B733-3DB51176B4F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56D8316C-2A78-48D0-B733-3DB51176B4F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

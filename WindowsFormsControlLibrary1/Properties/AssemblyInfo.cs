@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("NRakeKeywordExtractor")]
+[assembly: AssemblyTitle("WindowsFormsControlLibrary1")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NRakeKeywordExtractor")]
+[assembly: AssemblyProduct("WindowsFormsControlLibrary1")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d4642c8a-9157-4eb5-8ddf-44cc7b2021cc")]
+[assembly: Guid("56d8316c-2a78-48d0-b733-3db51176b4f9")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,8 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("34.0.0.312")]
-[assembly: AssemblyFileVersion("34.0.0.312")]
-[assembly: InternalsVisibleTo("NRakeKeywordExtractor.Tests")]
-[assembly: InternalsVisibleTo("NRakeKeywordExtractor.Explorables")]
-
+[assembly: AssemblyVersion("31.0.0.312")]
+[assembly: AssemblyFileVersion("31.0.0.312")]
