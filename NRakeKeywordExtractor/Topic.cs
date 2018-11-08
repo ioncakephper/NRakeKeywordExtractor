@@ -11,6 +11,8 @@ namespace NRakeKeywordExtractor
     /// </summary>
     public class Topic : BasicTopic
     {
+        public int Words { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Topic"/> class.
         /// </summary>

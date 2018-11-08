@@ -12,7 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <AssemblyVersion>35.0.0.312</AssemblyVersion>
+    <AssemblyVersion>37.0.0.312</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -81,6 +81,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\ioncakephper\NRake\NRakeCore\NRakeCore.csproj">
+      <Project>{1d4af0c3-15f6-48bf-b12d-39c7802172d9}</Project>
+      <Name>NRakeCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NRakeKeywordExtractor\NRakeKeywordExtractor.csproj">
+      <Project>{d4642c8a-9157-4eb5-8ddf-44cc7b2021cc}</Project>
+      <Name>NRakeKeywordExtractor</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WindowsFormsControlLibrary1\WindowsFormsControlLibrary1.csproj">
       <Project>{56D8316C-2A78-48D0-B733-3DB51176B4F9}</Project>
       <Name>WindowsFormsControlLibrary1</Name>
