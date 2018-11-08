@@ -109,5 +109,96 @@ namespace WindowsFormsApp1
         {
             AddFiles();
         }
+
+        /// <summary>
+        /// The ExtractFilesListKeywords
+        /// </summary>
+        private void ExtractFilesListKeywords()
+        {
+            var tke = new TopicKeywordExtractor(topics);
+            var keyPhrases = tke.FindKeyPhrases();
+            // UpdateKeyPhrasesList(keyPhrases);
+
+            var keyPhraseSummaries = new List<KeyPhraseSummary>();
+            foreach (var keyPhrase in keyPhrases)
+            {
+                var item = GetKeyPhraseSummary(keyPhrase, tke);
+                keyPhraseSummaries.Add(item);
+            }
+            UpdateKeyPhrasesList(keyPhraseSummaries);
+        }
+
+        private void UpdateKeyPhrasesList(List<KeyPhraseSummary> keyPhraseSummaries)
+        {
+            listView2.Items.Clear();
+            var items = GetKeyPhrasesListViewItems(keyPhraseSummaries, string.Empty);
+            listView2.Items.AddRange(items);
+        }
+
+        private ListViewItem[] GetKeyPhrasesListViewItems(List<KeyPhraseSummary> keyPhraseSummaries, string filter)
+        {
+            return ApplyFilter(filter, GetKeyPhrasesListViewItem(keyPhraseSummaries));
+        }
+
+        private ListViewItem[] GetKeyPhrasesListViewItem(List<KeyPhraseSummary> keyPhraseSummaries)
+        {
+            return keyPhraseSummaries.Select(keyPhrase => GetSingleKeyphraseListItem(keyPhrase)).ToArray();
+        }
+
+        private ListViewItem GetSingleKeyphraseListItem(KeyPhraseSummary keyPhraseSummary)
+        {
+            var item = new ListViewItem();
+            item.Tag = keyPhraseSummary;
+            item.Text = keyPhraseSummary.Text;
+            item.SubItems.AddRange(new string[] { keyPhraseSummary.DocumentCount.ToString(), keyPhraseSummary.Score.ToString(), keyPhraseSummary.WordCount.ToString() });
+
+            return item;
+        }
+
+        private KeyPhraseSummary GetKeyPhraseSummary(string keyPhrase, TopicKeywordExtractor tke)
+        {
+            var item = new KeyPhraseSummary(keyPhrase);
+            item.WordCount = keyPhrase.Split(' ').Length;
+            item.DocumentCount = tke.KeyPhraseTopics[keyPhrase].Count;
+            item.Score = (tke.PhraseScore.ContainsKey(keyPhrase)) ? tke.PhraseScore[keyPhrase] : 0;
+
+            return item;
+        }
+
+        private void UpdateKeyPhrasesList(string[] keyPhrases)
+        {
+            listView2.Items.Clear();
+            var items = GetKeyphrasesListViewItems(keyPhrases, string.Empty);
+            listView2.Items.AddRange(items);
+        }
+
+        private ListViewItem[] GetKeyphrasesListViewItems(string[] keyPhrases, string filter)
+        {
+            return ApplyFilter(filter, GetKeyphrasesListViewItems(keyPhrases));
+        }
+
+        private ListViewItem[] GetKeyphrasesListViewItems(string[] keyPhrases)
+        {
+            return keyPhrases.Select(keyPhrase => GetSingleKeyphraseListItem(keyPhrase)).ToArray();
+        }
+
+        private ListViewItem GetSingleKeyphraseListItem(string keyPhrase)
+        {
+            var item = new ListViewItem();
+            item.Tag = keyPhrase;
+            item.Text = keyPhrase;
+
+            return item;
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            ExtractFilesListKeywords();
+        }
+
+        private void extractToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExtractFilesListKeywords();
+        }
     }
 }

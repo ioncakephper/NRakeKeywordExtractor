@@ -11,8 +11,6 @@ namespace NRakeKeywordExtractor
     /// </summary>
     public class Topic : BasicTopic
     {
-        public int Words { get; set; }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="Topic"/> class.
         /// </summary>
@@ -35,7 +33,7 @@ namespace NRakeKeywordExtractor
             var doc = new HtmlAgilityPack.HtmlDocument();
             doc.Load(FilePath);
             var node = doc.DocumentNode.SelectSingleNode("//head/title");
-            return node.InnerText;
+            return (node == null) ? string.Empty : node.InnerText;
         }
 
         /// <summary>
@@ -47,7 +45,7 @@ namespace NRakeKeywordExtractor
             var doc = new HtmlAgilityPack.HtmlDocument();
             doc.Load(FilePath);
             var node = doc.DocumentNode.SelectSingleNode("//body");
-            return node.InnerText;
+            return (node == null) ? string.Empty : node.InnerText;
         }
     }
 }

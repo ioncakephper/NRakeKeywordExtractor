@@ -45,6 +45,11 @@ namespace NRakeKeywordExtractor
         public string FilePath { get; set; }
 
         /// <summary>
+        /// Gets or sets the number of words in topic.
+        /// </summary>
+        public int Words { get; set; }
+
+        /// <summary>
         /// Get topic text
         /// </summary>
         /// <returns>String of words</returns>

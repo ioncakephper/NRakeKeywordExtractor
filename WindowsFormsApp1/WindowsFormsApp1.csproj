@@ -53,6 +53,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="KeyPhraseSummary.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -81,7 +82,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ioncakephper\NRake\NRakeCore\NRakeCore.csproj">
+    <ProjectReference Include="..\..\NRake\NRakeCore\NRakeCore.csproj">
       <Project>{1d4af0c3-15f6-48bf-b12d-39c7802172d9}</Project>
       <Name>NRakeCore</Name>
     </ProjectReference>

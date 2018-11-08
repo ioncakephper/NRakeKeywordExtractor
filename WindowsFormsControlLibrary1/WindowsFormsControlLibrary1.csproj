@@ -58,5 +58,11 @@
       <DependentUpon>ImprovedListView.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\NRake\NRakeCore\NRakeCore.csproj">
+      <Project>{1d4af0c3-15f6-48bf-b12d-39c7802172d9}</Project>
+      <Name>NRakeCore</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

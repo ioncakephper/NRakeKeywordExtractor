@@ -9,6 +9,7 @@ namespace NRakeKeywordExtractor
     using NRakeCore;
     using System.Collections.Generic;
     using System.Linq;
+    using System;
 
     /// <summary>
     /// Defines the <see cref="TopicKeywordExtractor" />
@@ -22,6 +23,8 @@ namespace NRakeKeywordExtractor
         {
             KeywordExtractor = new KeywordExtractor(new NRakeCore.StopWordFilters.EnglishSmartStopWordFilter());
             Items = new List<Topic>();
+            PhraseScore = new Dictionary<string, float>();
+
             TopicKeyPhrases = new Dictionary<Topic, List<string>>();
         }
 
@@ -109,6 +112,8 @@ namespace NRakeKeywordExtractor
         /// Gets the KeyPhraseTopics
         /// </summary>
         public SortedList<string, List<Topic>> KeyPhraseTopics { get; private set; }
+        
+        public Dictionary<string, float> PhraseScore { get; private set; }
 
         /// <summary>
         /// The FindKeyPhrases
@@ -143,8 +148,31 @@ namespace NRakeKeywordExtractor
                 TopicKeyPhrases.Add(topic, keyPhrases.ToList());
             }
             KeyPhraseTopics = ToKeyPhraseTopics(TopicKeyPhrases);
-            return KeyPhraseTopics.Keys.ToArray();
+
+            string[] allKeyPhrases = KeyPhraseTopics.Keys.ToArray();
+            PhraseScore = BuildPhraseScore(allKeyPhrases);
+
+            return allKeyPhrases;            
         }
+
+        private Dictionary<string, float> BuildPhraseScore(string[] allKeyPhrases)
+        {
+            var phraseScore = new Dictionary<string, float>();
+            allKeyPhrases.ToList().ForEach(kp => phraseScore.Add(kp, GetSinglePhraseScore(kp)));
+
+            return phraseScore;
+        }
+
+        private float GetSinglePhraseScore(string keyPhrase)
+        {
+            return keyPhrase.Split(' ').Select(w => GetWordScore(w)).Sum();
+        }
+
+        private float GetWordScore(string w)
+        {
+            return (KeywordExtractor.LeagueTable.ContainsKey(w)) ? (float)KeywordExtractor.LeagueTable[w].Ratio : 0;
+        }
+
 
         /// <summary>
         /// The ToKeyPhraseTopics

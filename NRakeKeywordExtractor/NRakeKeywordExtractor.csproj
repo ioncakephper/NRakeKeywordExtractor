@@ -92,8 +92,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ioncakephper\NRake\NRakeCore\NRakeCore.csproj">
-      <Project>{1D4AF0C3-15F6-48BF-B12D-39C7802172D9}</Project>
+    <ProjectReference Include="..\..\NRake\NRakeCore\NRakeCore.csproj">
+      <Project>{1d4af0c3-15f6-48bf-b12d-39c7802172d9}</Project>
       <Name>NRakeCore</Name>
     </ProjectReference>
   </ItemGroup>
