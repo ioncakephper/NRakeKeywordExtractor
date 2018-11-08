@@ -12,7 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <AssemblyVersion>32.0.0.310</AssemblyVersion>
+    <AssemblyVersion>33.0.0.312</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -92,8 +92,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\NRake\NRakeCore\NRakeCore.csproj">
-      <Project>{1d4af0c3-15f6-48bf-b12d-39c7802172d9}</Project>
+    <ProjectReference Include="..\..\ioncakephper\NRake\NRakeCore\NRakeCore.csproj">
+      <Project>{1D4AF0C3-15F6-48BF-B12D-39C7802172D9}</Project>
       <Name>NRakeCore</Name>
     </ProjectReference>
   </ItemGroup>

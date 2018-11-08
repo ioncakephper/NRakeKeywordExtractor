@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRakeKeywordExtractor", "NRakeKeywordExtractor\NRakeKeywordExtractor.csproj", "{D4642C8A-9157-4EB5-8DDF-44CC7B2021CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRakeCore", "..\NRake\NRakeCore\NRakeCore.csproj", "{1D4AF0C3-15F6-48BF-B12D-39C7802172D9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{AD97BD89-AF4A-45F9-855D-519605843A49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRakeCore", "..\ioncakephper\NRake\NRakeCore\NRakeCore.csproj", "{1D4AF0C3-15F6-48BF-B12D-39C7802172D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{D4642C8A-9157-4EB5-8DDF-44CC7B2021CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4642C8A-9157-4EB5-8DDF-44CC7B2021CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4642C8A-9157-4EB5-8DDF-44CC7B2021CC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1D4AF0C3-15F6-48BF-B12D-39C7802172D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1D4AF0C3-15F6-48BF-B12D-39C7802172D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1D4AF0C3-15F6-48BF-B12D-39C7802172D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1D4AF0C3-15F6-48BF-B12D-39C7802172D9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AD97BD89-AF4A-45F9-855D-519605843A49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AD97BD89-AF4A-45F9-855D-519605843A49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD97BD89-AF4A-45F9-855D-519605843A49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD97BD89-AF4A-45F9-855D-519605843A49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D4AF0C3-15F6-48BF-B12D-39C7802172D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D4AF0C3-15F6-48BF-B12D-39C7802172D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D4AF0C3-15F6-48BF-B12D-39C7802172D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D4AF0C3-15F6-48BF-B12D-39C7802172D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
