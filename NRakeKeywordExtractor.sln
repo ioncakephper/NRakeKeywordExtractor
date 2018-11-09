@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRakeKeywordExtractor", "NRakeKeywordExtractor\NRakeKeywordExtractor.csproj", "{D4642C8A-9157-4EB5-8DDF-44CC7B2021CC}"
 EndProject
@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "Windows
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsControlLibrary1", "WindowsFormsControlLibrary1\WindowsFormsControlLibrary1.csproj", "{56D8316C-2A78-48D0-B733-3DB51176B4F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRakeCore", "..\NRake\NRakeCore\NRakeCore.csproj", "{1D4AF0C3-15F6-48BF-B12D-39C7802172D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRakeCore", "NRakeCore\NRakeCore.csproj", "{1D4AF0C3-15F6-48BF-B12D-39C7802172D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

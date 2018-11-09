@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
-    <AssemblyVersion>5.0.0.313</AssemblyVersion>
+    <AssemblyVersion>13.0.0.313</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -83,7 +83,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\NRake\NRakeCore\NRakeCore.csproj">
+    <ProjectReference Include="..\NRakeCore\NRakeCore.csproj">
       <Project>{1d4af0c3-15f6-48bf-b12d-39c7802172d9}</Project>
       <Name>NRakeCore</Name>
     </ProjectReference>

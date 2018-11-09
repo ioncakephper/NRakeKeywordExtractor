@@ -11,6 +11,8 @@ namespace NRakeKeywordExtractor
     /// </summary>
     public class Topic : BasicTopic
     {
+        public bool Checked { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Topic"/> class.
         /// </summary>
