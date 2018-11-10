@@ -1,4 +1,9 @@
-﻿namespace WindowsFormsApp1
+﻿//-----------------------------------------------------------------------
+// <copyright file="TopicFilesDialog.Designer.cs" company="Ion Gireada">
+//     Copyright (c) Ion Gireada. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+namespace WindowsFormsApp1
 {
     partial class TopicFilesDialog
     {
@@ -54,7 +59,7 @@
             this.okButton.Location = new System.Drawing.Point(542, 398);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(75, 23);
-            this.okButton.TabIndex = 2;
+            this.okButton.TabIndex = 9;
             this.okButton.Text = "OK";
             this.okButton.UseVisualStyleBackColor = true;
             // 
@@ -75,7 +80,7 @@
             this.helpButton.Location = new System.Drawing.Point(461, 398);
             this.helpButton.Name = "helpButton";
             this.helpButton.Size = new System.Drawing.Size(75, 23);
-            this.helpButton.TabIndex = 1;
+            this.helpButton.TabIndex = 8;
             this.helpButton.Text = "Help";
             this.helpButton.UseVisualStyleBackColor = true;
             // 
@@ -85,7 +90,7 @@
             this.addFilesButton.Location = new System.Drawing.Point(623, 12);
             this.addFilesButton.Name = "addFilesButton";
             this.addFilesButton.Size = new System.Drawing.Size(75, 23);
-            this.addFilesButton.TabIndex = 3;
+            this.addFilesButton.TabIndex = 2;
             this.addFilesButton.Text = "Add...";
             this.addFilesButton.UseVisualStyleBackColor = true;
             this.addFilesButton.Click += new System.EventHandler(this.addFilesButton_Click);
@@ -96,9 +101,10 @@
             this.button2.Location = new System.Drawing.Point(623, 41);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
+            this.button2.TabIndex = 3;
             this.button2.Text = "Remove";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // openFileDialog1
             // 
@@ -116,7 +122,7 @@
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(605, 380);
-            this.panel1.TabIndex = 5;
+            this.panel1.TabIndex = 1;
             // 
             // listView1
             // 
@@ -132,10 +138,11 @@
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(605, 380);
             this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.listView1.TabIndex = 3;
+            this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.listView1_ItemChecked);
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -163,7 +170,7 @@
             this.button1.Location = new System.Drawing.Point(623, 70);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Remove all";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -173,7 +180,7 @@
             this.button3.Location = new System.Drawing.Point(623, 99);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 7;
+            this.button3.TabIndex = 5;
             this.button3.Text = "Check all";
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -183,7 +190,7 @@
             this.button4.Location = new System.Drawing.Point(623, 128);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 8;
+            this.button4.TabIndex = 6;
             this.button4.Text = "Reset";
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -193,7 +200,7 @@
             this.button5.Location = new System.Drawing.Point(623, 157);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 9;
+            this.button5.TabIndex = 7;
             this.button5.Text = "Toggle";
             this.button5.UseVisualStyleBackColor = true;
             // 

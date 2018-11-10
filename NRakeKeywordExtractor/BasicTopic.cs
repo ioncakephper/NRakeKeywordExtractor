@@ -3,13 +3,12 @@
 //    Copyright (c) 2018 Ion Gireada
 // </copyright>
 //------------------------------------------------------------------------------------
-
 namespace NRakeKeywordExtractor
 {
     using System;
 
     /// <summary>
-    /// Defines the <see cref="BasicTopic" />
+    /// Defines the <see cref="BasicTopic" />.
     /// </summary>
     public class BasicTopic
     {
@@ -25,22 +24,22 @@ namespace NRakeKeywordExtractor
         }
 
         /// <summary>
-        /// Gets or sets the FileName
+        /// Gets or sets the FileName.
         /// </summary>
         public string FileName { get; set; }
 
         /// <summary>
-        /// Gets or sets the Folder
+        /// Gets or sets the Folder.
         /// </summary>
         public string Folder { get; set; }
 
         /// <summary>
-        /// Gets or sets the topic title
+        /// Gets or sets the topic title.
         /// </summary>
         public string Title { get; set; }
 
         /// <summary>
-        /// Gets or sets the FilePath
+        /// Gets or sets the FilePath.
         /// </summary>
         public string FilePath { get; set; }
 
@@ -50,28 +49,28 @@ namespace NRakeKeywordExtractor
         public int Words { get; set; }
 
         /// <summary>
-        /// Get topic text
+        /// Get topic text.
         /// </summary>
-        /// <returns>String of words</returns>
+        /// <returns>String of words.</returns>
         public virtual string GetText()
         {
             return string.Empty;
         }
 
         /// <summary>
-        /// Get topic title
+        /// Get topic title.
         /// </summary>
-        /// <returns>The <see cref="string"/></returns>
+        /// <returns>The .<see cref="string"/></returns>
         public virtual string GetTitle()
         {
             return GetTitle(FilePath);
         }
 
         /// <summary>
-        /// Get topic title
+        /// Get topic title.
         /// </summary>
-        /// <param name="path">Path to topic full path</param>
-        /// <returns>The <see cref="string"/></returns>
+        /// <param name="path">Path to topic full path.</param>
+        /// <returns>The .<see cref="string"/></returns>
         public virtual string GetTitle(string path)
         {
             return String.Empty;

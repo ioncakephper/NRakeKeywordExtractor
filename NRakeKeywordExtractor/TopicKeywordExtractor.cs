@@ -12,7 +12,7 @@ namespace NRakeKeywordExtractor
     using System;
 
     /// <summary>
-    /// Defines the <see cref="TopicKeywordExtractor" />
+    /// Defines the .<see cref="TopicKeywordExtractor" />
     /// </summary>
     public class TopicKeywordExtractor
     {
@@ -24,14 +24,14 @@ namespace NRakeKeywordExtractor
             KeywordExtractor = new KeywordExtractor(new NRakeCore.StopWordFilters.EnglishSmartStopWordFilter());
             Items = new List<Topic>();
             PhraseScore = new Dictionary<string, float>();
-
+            PhraseRank = new SortedList<string, int>();
             TopicKeyPhrases = new Dictionary<Topic, List<string>>();
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TopicKeywordExtractor"/> class.
         /// </summary>
-        /// <param name="topic">The topic<see cref="Topic"/></param>
+        /// <param name="topic">The topic.<see cref="Topic"/></param>
         public TopicKeywordExtractor(Topic topic) : this()
         {
             Items.Add(topic);
@@ -40,8 +40,8 @@ namespace NRakeKeywordExtractor
         /// <summary>
         /// Initializes a new instance of the <see cref="TopicKeywordExtractor"/> class.
         /// </summary>
-        /// <param name="topic">The topic<see cref="Topic"/></param>
-        /// <param name="filter">The filter<see cref="NRakeCore.StopWordFilters.IStopWordFilter"/></param>
+        /// <param name="topic">The topic.<see cref="Topic"/></param>
+        /// <param name="filter">The filter.<see cref="NRakeCore.StopWordFilters.IStopWordFilter"/></param>
         public TopicKeywordExtractor(Topic topic, NRakeCore.StopWordFilters.IStopWordFilter filter) : this(topic)
         {
             KeywordExtractor = new NRakeCore.KeywordExtractor(filter);
@@ -50,7 +50,7 @@ namespace NRakeKeywordExtractor
         /// <summary>
         /// Initializes a new instance of the <see cref="TopicKeywordExtractor"/> class.
         /// </summary>
-        /// <param name="topics">The topics<see cref="Topic[]"/></param>
+        /// <param name="topics">The topics.<see cref="Topic[]"/></param>
         public TopicKeywordExtractor(Topic[] topics) : this()
         {
             Items.AddRange(topics);
@@ -59,8 +59,8 @@ namespace NRakeKeywordExtractor
         /// <summary>
         /// Initializes a new instance of the <see cref="TopicKeywordExtractor"/> class.
         /// </summary>
-        /// <param name="topics">The topics<see cref="Topic[]"/></param>
-        /// <param name="filter">The filter<see cref="NRakeCore.StopWordFilters.IStopWordFilter"/></param>
+        /// <param name="topics">The topics.<see cref="Topic[]"/></param>
+        /// <param name="filter">The filter.<see cref="NRakeCore.StopWordFilters.IStopWordFilter"/></param>
         public TopicKeywordExtractor(Topic[] topics, NRakeCore.StopWordFilters.IStopWordFilter filter) : this(topics)
         {
             KeywordExtractor = new NRakeCore.KeywordExtractor(filter);
@@ -69,7 +69,7 @@ namespace NRakeKeywordExtractor
         /// <summary>
         /// Initializes a new instance of the <see cref="TopicKeywordExtractor"/> class.
         /// </summary>
-        /// <param name="topics">The topics<see cref="List{Topic}"/></param>
+        /// <param name="topics">The topics.<see cref="List{Topic}"/></param>
         public TopicKeywordExtractor(List<Topic> topics) : this(topics.ToArray())
         {
         }
@@ -77,8 +77,8 @@ namespace NRakeKeywordExtractor
         /// <summary>
         /// Initializes a new instance of the <see cref="TopicKeywordExtractor"/> class.
         /// </summary>
-        /// <param name="topics">The topics<see cref="List{Topic}"/></param>
-        /// <param name="filter">The filter<see cref="NRakeCore.StopWordFilters.IStopWordFilter"/></param>
+        /// <param name="topics">The topics.<see cref="List{Topic}"/></param>
+        /// <param name="filter">The filter.<see cref="NRakeCore.StopWordFilters.IStopWordFilter"/></param>
         public TopicKeywordExtractor(List<Topic> topics, NRakeCore.StopWordFilters.IStopWordFilter filter) : this(topics)
         {
             KeywordExtractor = new NRakeCore.KeywordExtractor(filter);
@@ -87,58 +87,59 @@ namespace NRakeKeywordExtractor
         /// <summary>
         /// Initializes a new instance of the <see cref="TopicKeywordExtractor"/> class.
         /// </summary>
-        /// <param name="filter">The filter<see cref="NRakeCore.StopWordFilters.IStopWordFilter"/></param>
+        /// <param name="filter">The filter.<see cref="NRakeCore.StopWordFilters.IStopWordFilter"/></param>
         public TopicKeywordExtractor(NRakeCore.StopWordFilters.IStopWordFilter filter) : this()
         {
             KeywordExtractor = new NRakeCore.KeywordExtractor(filter);
         }
 
         /// <summary>
-        /// Gets or sets the Items
+        /// Gets or sets the Items.
         /// </summary>
         public List<Topic> Items { get; set; }
 
         /// <summary>
-        /// Gets the KeywordExtractor
+        /// Gets the KeywordExtractor.
         /// </summary>
         public KeywordExtractor KeywordExtractor { get; private set; }
 
         /// <summary>
-        /// Gets the TopicKeyPhrases
+        /// Gets the TopicKeyPhrases.
         /// </summary>
         public Dictionary<Topic, List<string>> TopicKeyPhrases { get; private set; }
 
         /// <summary>
-        /// Gets the KeyPhraseTopics
+        /// Gets the KeyPhraseTopics.
         /// </summary>
         public SortedList<string, List<Topic>> KeyPhraseTopics { get; private set; }
         
         public Dictionary<string, float> PhraseScore { get; private set; }
+        public SortedList<string, int> PhraseRank { get; set; }
 
         /// <summary>
-        /// The FindKeyPhrases
+        /// The FindKeyPhrases.
         /// </summary>
-        /// <returns>The <see cref="string[]"/></returns>
+        /// <returns>The .<see cref="string[]"/></returns>
         public string[] FindKeyPhrases()
         {
             return FindKeyPhrases(Items);
         }
 
         /// <summary>
-        /// The FindKeyPhrases
+        /// The FindKeyPhrases.
         /// </summary>
-        /// <param name="items">The items<see cref="List{Topic}"/></param>
-        /// <returns>The <see cref="string[]"/></returns>
+        /// <param name="items">The items.<see cref="List{Topic}"/></param>
+        /// <returns>The .<see cref="string[]"/></returns>
         public string[] FindKeyPhrases(List<Topic> items)
         {
             return FindKeyPhrases(items.ToArray());
         }
 
         /// <summary>
-        /// The FindKeyPhrases
+        /// The FindKeyPhrases.
         /// </summary>
-        /// <param name="topics">The topics<see cref="Topic[]"/></param>
-        /// <returns>The <see cref="string[]"/></returns>
+        /// <param name="topics">The topics.<see cref="Topic[]"/></param>
+        /// <returns>The .<see cref="string[]"/></returns>
         public string[] FindKeyPhrases(Topic[] topics)
         {
             TopicKeyPhrases.Clear();
@@ -151,8 +152,18 @@ namespace NRakeKeywordExtractor
 
             string[] allKeyPhrases = KeyPhraseTopics.Keys.ToArray();
             PhraseScore = BuildPhraseScore(allKeyPhrases);
+            PhraseRank = BuildPhraseRank(allKeyPhrases);
 
             return allKeyPhrases;            
+        }
+
+        private SortedList<string, int> BuildPhraseRank(string[] allKeyPhrases)
+        {
+            var phraseRank = new SortedList<string, int>();
+            var scores = BuildPhraseScore(allKeyPhrases).OrderByDescending(p => p.Value);
+            var rank = 0;
+            scores.ToList().ForEach(p => phraseRank.Add(p.Key, ++rank));
+            return phraseRank;
         }
 
         private Dictionary<string, float> BuildPhraseScore(string[] allKeyPhrases)
@@ -175,10 +186,10 @@ namespace NRakeKeywordExtractor
 
 
         /// <summary>
-        /// The ToKeyPhraseTopics
+        /// The ToKeyPhraseTopics.
         /// </summary>
-        /// <param name="topicKeyPhrases">The topicKeyPhrases<see cref="Dictionary{Topic, List{string}}"/></param>
-        /// <returns>The <see cref="SortedList{string, List{Topic}}"/></returns>
+        /// <param name="topicKeyPhrases">The topicKeyPhrases.<see cref="Dictionary{Topic, List{string}}"/></param>
+        /// <returns>The .<see cref="SortedList{string, List{Topic}}"/></returns>
         private SortedList<string, List<Topic>> ToKeyPhraseTopics(Dictionary<Topic, List<string>> topicKeyPhrases)
         {
             var keyPhraseTopics = new SortedList<string, List<Topic>>();
